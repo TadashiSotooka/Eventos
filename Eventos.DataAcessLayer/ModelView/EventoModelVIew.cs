@@ -15,6 +15,6 @@ namespace Eventos.DataAcessLayer.ModelView
         public DateTime HoraFim { get; set; }
         public String OpenBar { get; set; }
         public int QuantidadeDeAmbientes { get; set; }
-        public int FaixaEtária { get; set; }
+        public int FaixaEtaria { get; set; }
     }
 }
