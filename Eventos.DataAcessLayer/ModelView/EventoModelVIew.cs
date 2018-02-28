@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Eventos.DataAcessLayer.ModelView
 {
-    public class EventoModelVIew
+    public class EventoModelView
     {
         [Required]
         public String Nome { get; set; }
