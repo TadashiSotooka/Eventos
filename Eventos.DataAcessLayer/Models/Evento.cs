@@ -12,13 +12,21 @@ namespace Eventos.DataAcessLayer.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int IdEvento { get; set; }
         [Required]
+        [StringLength(50)]
         public String Nome { get; set; }
+        [StringLength(100)]
         public String Local { get; set; }
+        [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         public DateTime Data { get; set; }
-        public DateTime HoraIncio { get; set; }
-        public DateTime HoraFim{ get; set; }
-        public String OpenBar { get; set; }
+        [DisplayFormat(DataFormatString = "{0:hh\\:mm}", ApplyFormatInEditMode = true)]
+        public TimeSpan HoraIncio { get; set; }
+        [DisplayFormat(DataFormatString = "{0:hh\\:mm}", ApplyFormatInEditMode = true)]
+        public TimeSpan HoraFim { get; set; }
+        public Boolean OpenBar { get; set; }
         public int QuantidadeDeAmbientes { get; set; }
+        [Range(0, 18)]
         public int FaixaEtaria { get; set; }
+
     }
 }
