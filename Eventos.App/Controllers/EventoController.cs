@@ -18,8 +18,8 @@ namespace Eventos.App.Controllers
         {
             try
             {
-                //var eventoBll = new EventoBll();
-                //eventoBll.Insert(eventoModelView);
+                var eventoBll = new EventoBll();
+                eventoBll.Insert(eventoModelView);
                 return NoContent();
             }
             catch (Exception ex)
