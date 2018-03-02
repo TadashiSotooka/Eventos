@@ -7,13 +7,13 @@ namespace Eventos.DataAcessLayer.ModelView
 {
     public class EventoModelView
     {
-        [Required]
+
         public String Nome { get; set; }
         public String Local { get; set; }
         public DateTime Data { get; set; }
-        public DateTime HoraIncio { get; set; }
-        public DateTime HoraFim { get; set; }
-        public String OpenBar { get; set; }
+        public TimeSpan HoraIncio { get; set; }
+        public TimeSpan HoraFim { get; set; }
+        public Boolean OpenBar { get; set; }
         public int QuantidadeDeAmbientes { get; set; }
         public int FaixaEtaria { get; set; }
     }
