@@ -16,5 +16,7 @@ namespace Eventos.DataAcessLayer.Models
         [Required]
         //[EmailAddress]
         public String Email { get; set; }
+
+        public Evento Evento { get; set; }
     }
 }

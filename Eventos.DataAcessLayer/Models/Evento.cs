@@ -33,5 +33,7 @@ namespace Eventos.DataAcessLayer.Models
 
         public int MaximoIngressos { get; set; }
         public int IngressosVendidos { get; set; }
+
+        public ICollection<Participante> Participantes { get; set; }
     }
 }
