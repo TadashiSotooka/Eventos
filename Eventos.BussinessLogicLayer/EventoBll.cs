@@ -3,6 +3,7 @@ using Eventos.DataAcessLayer.Models;
 using Eventos.DataAcessLayer.ModelView;
 using System;
 using System.Collections.Generic;
+using System.Net;
 using System.Text;
 
 namespace Eventos.BussinessLogicLayer
@@ -53,26 +54,32 @@ namespace Eventos.BussinessLogicLayer
             evento.HoraFim = eventoModelView.HoraFim;
             evento.OpenBar = eventoModelView.OpenBar;
             evento.QuantidadeDeAmbientes = eventoModelView.QuantidadeDeAmbientes;
-            evento.FaixaEtaria = eventoModelView.FaixaEtaria;
+            //evento.FaixaEtaria = eventoModelView.FaixaEtaria;
 
             evento.MaximoIngressos = eventoModelView.MaximoIngressos;
             evento.IngressosVendidos = eventoModelView.IngressosVendidos;
 
+            if(evento.IngressosVendidos > evento.MaximoIngressos)
+            {
+                var message = string.Format("Não foi possivel, esgotou os ingressos");
+                Console.WriteLine(message);
+            }
+
             /*  
             if (evento.HoraIncio > 10:00 && evento.HoraFim < 20:00  && evento.QuantidadeDeAmbientes > 2)
             {
-                evento.FaixaEtaria = < 16;
+                evento.FaixaEtaria = "Para menores de 16";
             }
             else if (evento.HoraInicio > 20:30 && evento.HoraFim < 02:00 && evento.OpenBar == false)
             {
-                evento.FaixaEtaria = > 16;
+                evento.FaixaEtaria = "Para maiores de 16";
             }
             else
             {
-                evento.FaixaEtaria =  18;
+                evento.FaixaEtaria =  "Para Maiores de 18";
             }*/
 
-                return evento;
+            return evento;
 
         }
     }

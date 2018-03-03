@@ -11,9 +11,10 @@ using System;
 namespace Eventos.DataAcessLayer.Migrations
 {
     [DbContext(typeof(Database))]
-    partial class DatabaseModelSnapshot : ModelSnapshot
+    [Migration("20180303180935_FazendoAjustes")]
+    partial class FazendoAjustes
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -26,14 +27,14 @@ namespace Eventos.DataAcessLayer.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<DateTime?>("Data");
+                    b.Property<DateTime>("Data");
 
                     b.Property<string>("FaixaEtaria")
                         .IsRequired();
 
-                    b.Property<TimeSpan?>("HoraFim");
+                    b.Property<TimeSpan>("HoraFim");
 
-                    b.Property<TimeSpan?>("HoraIncio");
+                    b.Property<TimeSpan>("HoraIncio");
 
                     b.Property<int>("IngressosVendidos");
 

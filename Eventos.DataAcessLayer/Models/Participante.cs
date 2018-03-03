@@ -10,7 +10,7 @@ namespace Eventos.DataAcessLayer.Models
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int IdEvento { get; set; }
+        public int IdParticipante { get; set; }
         [Required]
         public String NomeParticipante { get; set; }
         [Required]

@@ -51,22 +51,6 @@ namespace Eventos.BussinessLogicLayer
             participante.NomeParticipante = participanteModelView.NomeParticipante;
             participante.Email = participanteModelView.Email;
             evento.IdEvento = participanteModelView.Evento.IdEvento;
-         
-           
-
-            /*  
-            if (evento.HoraIncio > 10:00 && evento.HoraFim < 20:00  && evento.QuantidadeDeAmbientes > 2)
-            {
-                evento.FaixaEtaria = < 16;
-            }
-            else if (evento.HoraInicio > 20:30 && evento.HoraFim < 02:00 && evento.OpenBar == false)
-            {
-                evento.FaixaEtaria = > 16;
-            }
-            else
-            {
-                evento.FaixaEtaria =  18;
-            }*/
 
             return participante;
 
