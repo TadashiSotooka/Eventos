@@ -54,25 +54,25 @@ namespace Eventos.BussinessLogicLayer
             evento.OpenBar = eventoModelView.OpenBar;
             evento.QuantidadeDeAmbientes = eventoModelView.QuantidadeDeAmbientes;
             evento.FaixaEtaria = eventoModelView.FaixaEtaria;
-    
-            /*if (evento.NotaCritica > 4 && evento.NotaPublica > 4)
-            {
-                evento.NotaFinal = "A";
-            }
-            else if (evento.NotaCritica > 4 && evento.NotaPublica > 3)
-            {
-                evento.NotaFinal = "B";
-            }
-            else if (evento.NotaCritica > 2 && evento.NotaPublica > 0)
-            {
-                evento.NotaFinal = "C";
-            }
-            else
-            {
-                evento.NotaFinal = "D";
-            }*/
 
-            return evento;
+            evento.MaximoIngressos = eventoModelView.MaximoIngressos;
+            evento.IngressosVendidos = eventoModelView.IngressosVendidos;
+
+                /*  
+                if (evento.HoraIncio > 10:00 && evento.HoraFim < 20:00  && evento.QuantidadeDeAmbientes > 2)
+                {
+                    evento.FaixaEtaria = < 16;
+                }
+                else if (evento.HoraInicio > 20:30 && evento.HoraFim < 02:00 && evento.OpenBar == false)
+                {
+                    evento.FaixaEtaria = > 16;
+                }
+                else
+                {
+                    evento.FaixaEtaria =  18;
+                }*/
+
+                return evento;
 
         }
     }

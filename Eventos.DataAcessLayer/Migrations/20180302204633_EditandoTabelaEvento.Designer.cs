@@ -11,9 +11,10 @@ using System;
 namespace Eventos.DataAcessLayer.Migrations
 {
     [DbContext(typeof(Database))]
-    partial class DatabaseModelSnapshot : ModelSnapshot
+    [Migration("20180302204633_EditandoTabelaEvento")]
+    partial class EditandoTabelaEvento
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -34,13 +35,9 @@ namespace Eventos.DataAcessLayer.Migrations
 
                     b.Property<TimeSpan?>("HoraIncio");
 
-                    b.Property<int>("IngressosVendidos");
-
                     b.Property<string>("Local")
                         .IsRequired()
                         .HasMaxLength(100);
-
-                    b.Property<int>("MaximoIngressos");
 
                     b.Property<string>("Nome")
                         .IsRequired()

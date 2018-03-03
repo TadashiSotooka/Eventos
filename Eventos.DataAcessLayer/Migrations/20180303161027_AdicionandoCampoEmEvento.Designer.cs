@@ -11,9 +11,10 @@ using System;
 namespace Eventos.DataAcessLayer.Migrations
 {
     [DbContext(typeof(Database))]
-    partial class DatabaseModelSnapshot : ModelSnapshot
+    [Migration("20180303161027_AdicionandoCampoEmEvento")]
+    partial class AdicionandoCampoEmEvento
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

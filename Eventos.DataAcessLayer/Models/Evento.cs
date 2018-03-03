@@ -17,16 +17,13 @@ namespace Eventos.DataAcessLayer.Models
         [Required]
         [StringLength(100)]
         public String Local { get; set; }
-        [Required]
-        [DataType(DataType.Date)]
-        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
-        public DateTime Data { get; set; }
-        [Required]
-        [DisplayFormat(DataFormatString = "{0:hh\\:mm}", ApplyFormatInEditMode = true)]
-        public TimeSpan HoraIncio { get; set; }
-        [Required]
-        [DisplayFormat(DataFormatString = "{0:hh\\:mm}", ApplyFormatInEditMode = true)]
-        public TimeSpan HoraFim { get; set; }
+        //[DataType(DataType.Date)]
+        //[DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
+        public DateTime? Data { get; set; }
+        //[DisplayFormat(DataFormatString = "{0:hh\\:mm}", ApplyFormatInEditMode = true)]
+        public TimeSpan? HoraIncio { get; set; }
+        //[DisplayFormat(DataFormatString = "{0:hh\\:mm}", ApplyFormatInEditMode = true)]
+        public TimeSpan? HoraFim { get; set; }
         [Required]
         public Boolean OpenBar { get; set; }
         public int QuantidadeDeAmbientes { get; set; }
@@ -34,5 +31,7 @@ namespace Eventos.DataAcessLayer.Models
         [Range(0, 18)]
         public int FaixaEtaria { get; set; }
 
+        public int MaximoIngressos { get; set; }
+        public int IngressosVendidos { get; set; }
     }
 }
