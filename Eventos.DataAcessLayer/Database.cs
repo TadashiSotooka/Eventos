@@ -9,6 +9,7 @@ namespace Eventos.DataAcessLayer
     public class Database : DbContext
     {
         public DbSet<Evento> Eventos { get; set; }
+        public DbSet<Participante> Participantes { get; set; }
 
         //public BancoDeDados(DbContextOptions<BancoDeDados> options) : base(options) { }
 

@@ -12,10 +12,10 @@ namespace Eventos.DataAcessLayer.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int IdEvento { get; set; }
         [Required]
-        [StringLength(50)]
+        //[StringLength(50)]
         public String Nome { get; set; }
         [Required]
-        [StringLength(100)]
+        //[StringLength(100)]
         public String Local { get; set; }
         //[DataType(DataType.Date)]
         //[DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
